@@ -24,7 +24,7 @@ from sklearn.cluster import Birch
 from sklearn.metrics import silhouette_score
 
 st.title('Data Mining Project')
-st.title('Question2: Insurance Product Recommendation')
+st.title('Question3: Intelligent Decision-Making for Loan Application')
 st.text('Chong Sheng Hua 1161104297')
 st.text('Tee Choo Hwa 1161104595')
 st.text('Ho Ting Fong 1161104246')
