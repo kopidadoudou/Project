@@ -44,6 +44,9 @@ data_load_state.text("Done! (using st.cache)")
 st.subheader('Raw data')
 st.write(df)
 
+st.subheader('For Checking N/A')
+st.write(df.isna().any())
+
 st.header('Data Preprocessing')
 data_load_state = st.text('Data Preprocessing...')
 empty = df.isna().any()
@@ -160,8 +163,7 @@ for i in null_idx:
 
 df = new_df
 
-st.subheader('For Checking N/A')
-st.write(df.isna().any())
+
 
 
 # Credit_Card_types
@@ -200,6 +202,9 @@ for i in idx:
     df['Total_Income_for_Join_Application'].iloc[i] = df['Monthly_Salary'].iloc[i]
 
 data_load_state.text('Done! 2.3: Replace unreasonable data')
+
+st.subheader('For Checking N/A')
+st.write(df.isna().any())
 
 #df[df['Total_Income_for_Join_Application'] < df['Monthly_Salary']]
 
