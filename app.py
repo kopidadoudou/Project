@@ -748,21 +748,6 @@ st.pyplot()
 
 
 st.header('Clustering')
-st.subheader('Elbow Method')
-st.write('In cluster analysis, the elbow method is a heuristic used in determining the number of clusters in a data set. The method consists of plotting the explained variation as a function of the number of clusters, and picking the elbow of the curve as the number of clusters to use.')
-from sklearn.cluster import KMeans
-cs = []
-for i in range(1, 11):
-    kmeans = KMeans(n_clusters = i, init = 'k-means++', max_iter = 300, n_init = 10, random_state = 0)
-    kmeans.fit(X)
-    cs.append(kmeans.inertia_)
-plt.plot(range(1, 11), cs)
-plt.title('The Elbow Method')
-plt.xlabel('Number of clusters')
-plt.ylabel('CS')
-st.pyplot()
-
-st.write('By the plot above, we can see that there is a kink at 3. Hence k = 2 can be considered a good number of the cluster to cluster this data.')
 
 performance2 = pd.DataFrame(columns = ['method', 'df', 'Silhouette', 'Accuracy'])
 
